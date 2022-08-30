@@ -1,5 +1,10 @@
 def fibonacci(num)
-  # type your code in here
+  fibonacci_array = [0, 1]
+  (num - 1).times do |number|
+    fibonacci_array << fibonacci_array[-1] + fibonacci_array[-2]
+  end
+  fibonacci_array[num]
+
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -20,4 +25,7 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+
+
+
 # And a written explanation of your solution

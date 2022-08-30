@@ -1,5 +1,12 @@
 function fibonacci(num) {
-  // type your code here
+  fibonacciArray = [0, 1];
+  for (i = 0; i < num; i++) {
+    fibonacciArray.push(
+      fibonacciArray[fibonacciArray.length - 1] +
+        fibonacciArray[fibonacciArray.length - 2]
+    );
+  }
+  return fibonacciArray[num];
 }
 
 if (require.main === module) {
